@@ -1,3 +1,6 @@
+
+/* WARNING: Function: _guard_dispatch_icall replaced with injection: guard_dispatch_icall */
+
 ulonglong Initilization(void)
 
 {
@@ -88,12 +91,13 @@ CleanUP:
       }
       puVar10 = puVar10 + 1;
     }
+
     while ((ushort)(uVar5 - 1) < 0x20) {
       puVar10 = puVar10 + 1;
       uVar5 = *puVar10;
     }
                     /* Final Execution */
-    uVar9 = ThirdFunction(&IMAGE_DOS_HEADER_140000000);
+    uVar9 = MainExecution(&IMAGE_DOS_HEADER_140000000);
     DAT_14007f7cc = (uint)uVar9;
     if (DAT_14007f7f0 == 0) {
                     /* WARNING: Subroutine does not return */
@@ -106,3 +110,4 @@ CleanUP:
   }
   return uVar9;
 }
+
