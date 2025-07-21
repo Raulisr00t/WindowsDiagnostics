@@ -330,7 +330,7 @@ LAB_140038545:
                                               uVar4 = 0x277;
                                               goto PrintError_Label;
                                             }
-                                            conf_context[0x17] = 0;
+                                            conf_context[23] = 0;
                                           }
                                         }
                                       }
@@ -368,14 +368,19 @@ LAB_140038aac:
   }
   bytes = (LPCWSTR)(ulonglong)local_res10;
   argv = arg;
+
 LAB_14003834b:
   hHeap = GetProcessHeap();
   HeapFree(hHeap,0,memory);
+  
   if (argv != (LPWSTR *)0x0) {
     LocalFree(argv);
   }
+  
   if ((-1 < (int)result) && ((int)bytes != 0)) {
     conf_context[66] = 0xc;
   }
+
   return result;
 }
+
