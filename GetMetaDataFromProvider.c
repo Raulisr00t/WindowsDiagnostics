@@ -70,7 +70,7 @@ LAB_140039703:
       uVar8 = 0x124;
     }
     else {
-      uVar4 = QueryToRemoteServer(local_res20,(uint *)0x0);
+      uVar4 = Query(local_res20,(uint *)0x0);
       uVar7 = uVar4 & 0xffffffff;
       if ((int)uVar4 < 0) {
         uVar8 = 0x127;
@@ -261,7 +261,9 @@ LAB_140039a4f:
     hHeap = GetProcessHeap();
     HeapFree(hHeap,0,pwszLanguagesBuffer);
   }
+  
   VariantClear((VARIANTARG *)&local_70.n2);
+
   return uVar7;
 }
 
