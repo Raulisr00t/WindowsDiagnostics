@@ -49,11 +49,10 @@ CleanUP:
     }
     Allocation(plVar1,typecasted_status);
   }
-
   else {
     typecasted_status =
-         WriteToRegistry(L"Software\\Policies\\Microsoft\\Windows\\ScriptedDiagnostics",
-                         L"EnableDiagnostics");
+         CheckGroupPolicy(L"Software\\Policies\\Microsoft\\Windows\\ScriptedDiagnostics",
+                          L"EnableDiagnostics");
     if ((int)typecasted_status < 0) {
       ActivityID = 87;
       plVar1 = plVar2;
@@ -107,7 +106,6 @@ CleanUP:
   if (plVar1 != (longlong *)0x0) {
     (**(code **)(*plVar1 + 8))(plVar1,1);
   }
-
 EXIT:
   DestroyConfiguration();
   CloseHandles();
@@ -120,7 +118,9 @@ EXIT:
   {
     new = exit_code;
   }
-
+  
   ProtectStack(local_18 ^ (ulonglong)stack);
+
   return;
 }
+
