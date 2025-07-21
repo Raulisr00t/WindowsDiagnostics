@@ -18,9 +18,9 @@ longlong * TroubleShootingPackages(undefined8 *param_1)
   if (DAT_140080190 == (undefined8 *)0x0) {
     local_res18 = (undefined8 *)MemoryAllocate(0x10);
     if (local_res18 != (undefined8 *)0x0) {
-      _Memory = FUN_140026a30(local_res18);
+      _Memory = ReferToPointer(local_res18);
       if (_Memory != (longlong *)0x0) {
-        uVar1 = FUN_1400536f4(_Memory,&local_res10);
+        uVar1 = CreatePackageCollection(_Memory,&local_res10);
         plVar3 = (longlong *)(ulonglong)uVar1;
         if ((int)uVar1 < 0) {
           uVar4 = 0x41;
@@ -63,7 +63,7 @@ longlong * TroubleShootingPackages(undefined8 *param_1)
     plVar3 = (longlong *)0x8007000e;
     PrintERROR(1,"Dwz ERROR: %s:%d - hr = 0x%08X\n","TroubleshootingPackages::GetInstance",0x3e);
   }
-
+  
   else {
 LAB_140048bcb:
     *param_1 = DAT_140080190;
