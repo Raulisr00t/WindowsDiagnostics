@@ -21,7 +21,7 @@ ulonglong ParseConfigArguments(longlong conf_context,ulonglong argc,longlong arg
         hResult = 0x80070057;
         result = 0x16a;
 LAB_140038d13:
-        FUN_140006834(return_Addr,result,"base\\diagnosis\\pdui\\de\\wizard\\config.cpp");
+        LogConfigArgumentError(return_Addr,result,"base\\diagnosis\\pdui\\de\\wizard\\config.cpp" );
 LAB_140038d27:
         count = (ulonglong)hResult;
       }
@@ -51,7 +51,7 @@ LAB_140038d27:
         goto LAB_140038d13;
       }
       if ((int)LoadResult < 0) {
-        FUN_140006834(return_Addr,0x13f,"base\\diagnosis\\pdui\\de\\wizard\\config.cpp");
+        LogConfigArgumentError(return_Addr,0x13f,"base\\diagnosis\\pdui\\de\\wizard\\config.cpp") ;
         return LoadResult & 0xffffffff;
       }
       hasIDArg = true;
@@ -109,6 +109,7 @@ LAB_140038d27:
       }
     }
     count = count + 1;
+
   } while( true );
 }
 
