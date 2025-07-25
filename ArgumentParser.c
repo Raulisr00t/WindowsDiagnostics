@@ -169,7 +169,7 @@ LAB_140038545:
           if ((result1 == 0) && (file_name == (LPCWSTR)0x0)) {
             pWVar3 = (LPCWSTR)(ulonglong)(iVar5 + 1U);
             if (1 < (int)(iVar5 + 1U)) goto LAB_140038a60;
-            result = FUN_14003674c((longlong)conf_context,*file);
+            result = LoadCab((longlong)conf_context,*file);
             if ((int)result < 0) {
               uVar4 = 0x215;
               goto PrintError_Label;
@@ -368,19 +368,16 @@ LAB_140038aac:
   }
   bytes = (LPCWSTR)(ulonglong)local_res10;
   argv = arg;
-
 LAB_14003834b:
   hHeap = GetProcessHeap();
   HeapFree(hHeap,0,memory);
-  
   if (argv != (LPWSTR *)0x0) {
     LocalFree(argv);
   }
-  
   if ((-1 < (int)result) && ((int)bytes != 0)) {
     conf_context[66] = 0xc;
   }
-
+  
   return result;
 }
 
