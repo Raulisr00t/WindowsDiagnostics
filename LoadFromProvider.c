@@ -48,7 +48,7 @@ LAB_140037600:
     }
     else {
       if ((int)uVar4 == 1) goto CleanUp;
-      uVar4 = FUN_140037e6c(param_1,&local_68);
+      uVar4 = PackageConfiguration(param_1,&local_68);
       uVar6 = uVar4 & 0xffffffff;
       if (-1 < (int)uVar4) {
         *(undefined4 *)(param_1 + 4) = 1;
@@ -107,7 +107,6 @@ CleanUp:
     pvVar5 = GetProcessHeap();
     HeapFree(pvVar5,0,local_28);
   }
-
   return uVar6;
 }
 
