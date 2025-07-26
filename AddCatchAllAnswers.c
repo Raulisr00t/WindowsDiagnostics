@@ -57,7 +57,7 @@ uint AddCatchAllAnswers(undefined8 *param_1,OLECHAR *id,short *param_3)
           pOVar4 = pOVar6;
         }
         else {
-          uVar2 = InterestingFunction(path,uVar2,param_3);
+          uVar2 = ValidateOrFlagPowerShellCommand(path,uVar2,param_3);
           uVar1 = (uint)uVar2;
           if ((int)uVar1 < 0) {
             uVar2 = 0x142;
@@ -114,6 +114,7 @@ uint AddCatchAllAnswers(undefined8 *param_1,OLECHAR *id,short *param_3)
       }
     }
   }
+  
 LAB_1400338cc:
   PrintERROR(1,"Dwz ERROR: %s:%d - hr = 0x%08X\n","Answers::AddCatchAllAnswer",uVar2);
   bstrString = pOVar4;
@@ -126,6 +127,7 @@ Free:
   if (local_res20 != (longlong *)0x0) {
     (**(code **)(*local_res20 + 0x10))();
   }
+  
   return uVar1;
 }
 
