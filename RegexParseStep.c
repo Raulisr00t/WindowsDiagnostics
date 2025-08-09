@@ -82,7 +82,7 @@ LAB_140022964:
                 uVar4 = (*pcVar1)();
                 return uVar4;
               }
-              if (iVar2 != 0x7d) goto LAB_140022942;
+              if (iVar2 != L'}') goto LAB_140022942;
               if ((*(uint *)(param_1 + 0x10) & 0x10000000) == 0) {
                 ThrowRegexException(6);
                 pcVar1 = (code *)swi(3);
@@ -101,13 +101,13 @@ LAB_1400229c5:
         }
         HandleEscapeAndAdvanceChar(param_1);
         FUN_140022410((longlong)(param_1 + 8));
-        iVar2 = *(int *)((longlong)param_1 + 0x7c);
-        if (iVar2 == 0x5e) {
+        iVar2 = *(int *)((longlong)param_1 + L'|');
+        if (iVar2 == L'^') {
           *(uint *)(param_1[9] + 0xc) = *(uint *)(param_1[9] + 0xc) ^ 1;
           HandleEscapeAndAdvanceChar(param_1);
-          iVar2 = *(int *)((longlong)param_1 + 0x7c);
+          iVar2 = *(int *)((longlong)param_1 + L'|');
         }
-        if (((*(uint *)(param_1 + 0x10) & 0x20000000) != 0) && (iVar2 == 0x5d)) {
+        if (((*(uint *)(param_1 + 0x10) & 0x20000000) != 0) && (iVar2 == L']')) {
           FUN_140022370((longlong)(param_1 + 8),L']');
           HandleEscapeAndAdvanceChar(param_1);
         }
