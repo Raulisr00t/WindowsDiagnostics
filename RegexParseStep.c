@@ -115,9 +115,11 @@ LAB_1400229c5:
         if (*(int *)((longlong)param_1 + L'|') != L']') goto LAB_140022a62;
       }
       HandleEscapeAndAdvanceChar(param_1);
+
 LAB_140022971:
       uVar4 = ParseRegexQuantifier(param_1);
     }
+
 LAB_140022979:
     uVar3 = CONCAT71((int7)((ulonglong)uVar4 >> 8),1);
   } while( true );
