@@ -34,7 +34,7 @@ Goals
 
     Parser Logic: Implements quantifier parsing (*, +, {m,n}), with escape handling and validation.
 
-Tools Used
+## Tools Used
 
     Ghidra – For decompilation, symbol renaming, and control flow analysis.
 
@@ -42,7 +42,7 @@ Tools Used
 
     PowerShell – For regex bypass testing.
 
-Disclaimer
+# Disclaimer
 
 This research is intended for educational purposes only.
 Do not use this information for malicious activity.
